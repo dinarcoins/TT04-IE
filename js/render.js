@@ -13,12 +13,6 @@ var openMenuBtn = document.querySelector(".openMenu");
 var closeMenuBtn = document.querySelector(".closeMenu");
 var imageSpeakercontainer = document.getElementById("imageSpeakerContent");
 
-document
-  .getElementById("emailInputSubmit")
-  .addEventListener("click", function () {
-    alert("Đã nhận được thông tin email!");
-  });
-
 document.addEventListener("DOMContentLoaded", () => {
   openMenuBtn.addEventListener("click", () => {
     menuContainer.style.right = 0;

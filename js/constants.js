@@ -30,12 +30,12 @@ export var bannerDivBottomList = [
 ];
 
 export var speakerImageList = [
-  { img: "./imgs/introduce1.webp", alt: "speaker1", border: 'brtl30 brtr30 brbl30' },
-  { img: "./imgs/introduce1.webp", alt: "speaker2", border: 'brtl30 brtr30 ' },
-  { img: "./imgs/introduce1.webp", alt: "speaker3", border: 'brtl30 brtr30 brbr30 ' },
-  { img: "./imgs/introduce1.webp", alt: "speaker4", border: 'brtl30 brbr30 brbl30 ' },
-  { img: "./imgs/introduce1.webp", alt: "speaker5", border: 'brbr30 brbl30 ' },
-  { img: "./imgs/introduce1.webp", alt: "speaker6", border: 'brbr30 brtr30 brbl30' },
+  { img: "./imgs/introduce1.png", alt: "speaker1", border: 'brtl30 brtr30 brbl30' },
+  { img: "./imgs/introduce1.png", alt: "speaker2", border: 'brtl30 brtr30 ' },
+  { img: "./imgs/introduce1.png", alt: "speaker3", border: 'brtl30 brtr30 brbr30 ' },
+  { img: "./imgs/introduce1.png", alt: "speaker4", border: 'brtl30 brbr30 brbl30 ' },
+  { img: "./imgs/introduce1.png", alt: "speaker5", border: 'brbr30 brbl30 ' },
+  { img: "./imgs/introduce1.png", alt: "speaker6", border: 'brbr30 brtr30 brbl30' },
 ];
 
 export var instructList = [
@@ -182,17 +182,17 @@ export var programNavigationData = [
 
 export var newsItemList = [
   {
-    img: "./imgs/introduce1.webp",
+    img: "./imgs/introduce1.png",
     title: "Khai mạc hội thảo Khoa học quốc tế 'Ngôn ngữ học'",
     desc: "Nhằm kết nối các nhà nghiên cứu lĩnh vực Ngôn ngữ học ứng dụng trong nước và khư vực Châu á - Thái bình dương.",
   },
   {
-    img: "./imgs/introduce1.webp",
+    img: "./imgs/introduce1.png",
     title: "Đại học Hà Nội hoàn thành công tác chuẩn bị tổ chức",
     desc: "Nhằm kết nối các nhà nghiên cứu lĩnh vực Ngôn ngữ học ứng dụng trong nước và khư vực Châu á - Thái bình dương.",
   },
   {
-    img: "./imgs/introduce1.webp",
+    img: "./imgs/introduce1.png",
     title: "Buổi gặp gỡ giữa Đại học Hà Nội và Đoàn đại biểu Hiệp hội",
     desc: "Nhằm kết nối các nhà nghiên cứu lĩnh vực Ngôn ngữ học ứng dụng trong nước và khư vực Châu á - Thái bình dương.",
   },

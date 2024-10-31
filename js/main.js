@@ -20,15 +20,7 @@ var programNavigationTabContainer = document.getElementById(
 var newContentContainer = document.getElementById("newContent");
 
 document.addEventListener("DOMContentLoaded", function () {
-  var header = document.querySelector(".header");
 
-  function handleScroll() {
-    if (window.scrollY > 50) {
-      header.style.background = "#fff";
-    } else {
-      header.style.background = "transparent";
-    }
-  }
 
   window.addEventListener("scroll", handleScroll);
   bannerDivBottomContainer.innerHTML = bannerDivBottomList
