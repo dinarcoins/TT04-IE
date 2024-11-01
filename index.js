@@ -13,6 +13,56 @@ var chưaCóCache = true,
     ụHỏiĐáp: [], // MẢng chứa id sử dụng giao diện gửi câu hỏi
   };
 
+var footerItemList = [
+  {
+    text: "Giới thiệu hội thảo",
+    text1: "Chuyên mục 1",
+    href1: "#",
+    text2: "Chuyên mục 2",
+    href2: "#",
+    href2: "#",
+    text3: "Chuyên mục 3",
+    href3: "#",
+    href3: "#",
+  },
+  {
+    text: "Diễn đàn tham gia",
+    text1: "Chuyên mục 1",
+    href1: "#",
+    text2: "Chuyên mục 2",
+    href2: "#",
+    text3: "Chuyên mục 3",
+    href3: "#",
+  },
+  {
+    text: "Hướng dẫn gửi tham luận",
+    text1: "Chuyên mục 1",
+    href1: "#",
+    text2: "Chuyên mục 2",
+    href2: "#",
+    text3: "Chuyên mục 3",
+    href3: "#",
+  },
+  {
+    text: "Chương trình hội thảo",
+    text1: "Chuyên mục 1",
+    href1: "#",
+    text2: "Chuyên mục 2",
+    href2: "#",
+    text3: "Chuyên mục 3",
+    href3: "#",
+  },
+  {
+    text: "Tin tức - sự kiện",
+    text1: "Chuyên mục 1",
+    href1: "#",
+    text2: "Chuyên mục 2",
+    href2: "#",
+    text3: "Chuyên mục 3",
+    href3: "#",
+  },
+];
+
 var gửiThamLuậnList = [
   { icon: "fa-solid fa-share-nodes", title: "Chủ đề", text: "Chủ đề hội thảo" },
   {
@@ -60,6 +110,7 @@ $(function () {
             var menuChính = config("chuyênLực." + ụTổng), // chuyên Lực sẽ chỉ lấy các chuyên mục cấp con ngay sau nó
               thân,
               banner;
+            // cl("menuChính", menuChính);
             menuChính.pop();
             var trangChủ = function () {
               $(".wrapper")
@@ -88,7 +139,7 @@ $(function () {
                             class: "df aic fs13p fwb gap50 dn-lg-",
                           }).append(
                             !empty(menuChính) &&
-                              menuChính.map(function (id) {
+                            menuChính.map(function (id) {
                                 return $("<a>", {
                                   class: "menuNavItem bct bbw1 bss",
                                   text: dữLiệu.tên(id, "ụ"),
@@ -337,7 +388,6 @@ $(function () {
                             },
                             function (a) {
                               var t = $(this);
-                              cl("diễn giả tham gia", a);
                               //   a: Danh sách id bài viết
                               CẦN.db("bàiViết." + a, function () {
                                 t.empty().append(
@@ -345,8 +395,11 @@ $(function () {
                                     // cl(' dữLiệu.môTả(id,"ụ")',  dữLiệu.môTả(id,"ế"))
                                     //ia: id ế: mô tả của bài viết
                                     return $("<div>", {
-                                      text: dữLiệu.môTả(id,"ụ"),
-                                      class: `image-item bgrn bgpc bgsc pb51 ml5 mr5 mt5 mb5 bsbb mb50-md ${dữLiệu.môTả(id,"ế")}`,
+                                      text: dữLiệu.môTả(id, "ụ"),
+                                      class: `image-item bgrn bgpc bgsc pb51 ml5 mr5 mt5 mb5 bsbb mb50-md ${dữLiệu.môTả(
+                                        id,
+                                        "ế"
+                                      )}`,
                                     }).ảnh(id, "ế", true);
                                   })
                                 );
@@ -381,21 +434,25 @@ $(function () {
                         }).append(
                           gửiThamLuậnList.map(function (item) {
                             return $("<div>", {
-                              class:
-                                "col-xs-12 col-sm-3 brtl25 brtr25 brbl25 bgcf pl35 pr35 pt35 pb35 pt10-xs pb10-xs mb15",
+                              class: "col-xs-12 col-sm-4 plr15-sm ",
                             }).append(
-                              $("<i>", {
-                                class: `${item.icon} fs2 fs1-xs mb15`,
-                                style: "color: #6a1bbf",
-                              }),
                               $("<div>", {
-                                text: item.title,
-                                class: "fs1 fs1-xs fwb mb15",
-                              }),
-                              $("<div>", {
-                                text: item.text,
-                                class: "fs1 fs09-sm ",
-                              })
+                                class:
+                                  "brtl25 brtr25 brbl25 bgcf pl35 pr35 pt35 pb35 pt10-xs pb10-xs mb15",
+                              }).append(
+                                $("<i>", {
+                                  class: `${item.icon} fs2 fs1-xs mb15`,
+                                  style: "color: #6a1bbf",
+                                }),
+                                $("<div>", {
+                                  text: item.title,
+                                  class: "fs1 fs1-xs fwb mb15",
+                                }),
+                                $("<div>", {
+                                  text: item.text,
+                                  class: "fs1 fs09-sm ",
+                                })
+                              )
                             );
                           })
                         )
@@ -446,7 +503,6 @@ $(function () {
                               },
                             },
                             function (i) {
-                              cl("njsdjfbsdfsdfsd", i);
                               var t = $(this);
                               CẦN.db("bàiViết." + i, function () {
                                 !empty(i) &&
@@ -653,23 +709,67 @@ $(function () {
                       class: "bgGradient pt60 pb60 pr cf",
                     }).append(
                       $("<div>", { class: "container pl25 pr25" }).append(
-                        $("<div>", { class: "df fww gap50" }).append(
-                          $("<a>", { class: "wh80" }).append(
-                            $("<img>", {
-                              src: "/imgs/logo3.png",
-                              alt: "logoFooter",
-                              class: "wh1",
-                            })
+                        $("<div>", { class: "df w1 jcsb aic" }).append(
+                          $("<div>", { class: "df fww gap50 wfc" }).append(
+                            $("<a>", { class: "wh80" }).append(
+                              $("<img>", {
+                                src: "/imgs/logo3.png",
+                                alt: "logoFooter",
+                                class: "wh1",
+                              })
+                            )
+                          ),
+                          $("<div>", {
+                            class: "df gap50 fww jcfe dn-lg-",
+                          })
+                            .empty()
+                            .append(
+                              footerItemList.map(function (item, index) {
+                                return $("<div>", {
+                                  class: "df fdc w1-sm",
+                                }).append(
+                                  $("<div>", {
+                                    text: item.text,
+                                    class: "fwb lh25",
+                                  }),
+                                  $("<a>", {
+                                    text: item.text1,
+                                    href: item.href1,
+                                    class: "lh25",
+                                  }),
+                                  $("<a>", {
+                                    text: item.text2,
+                                    href: item.href2,
+                                    class: "lh25",
+                                  }),
+                                  $("<a>", {
+                                    text: item.text3,
+                                    href: item.href3,
+                                    class: "lh25",
+                                  })
+                                );
+                              })
+                            ),
+                          $("<div>", { class: "dn-lg" }).append(
+                            $("<div>", { text: "Liên hệ: " }).append(
+                              $("<a>", {
+                                text: "012-345-6789",
+                                href: "tel:0123456789",
+                              })
+                            ),
+                            $("<div>", { text: "Địa chỉ: " }).append(
+                              $("<a>", {
+                                text: "NIC Building, Ha Noi",
+                                href: "#",
+                              })
+                            )
                           )
-                        ),
-                        $("<div>", {
-                          class: "df gap50 fww",
-                        }).empty(),
-                        $("<div>", {
-                          html: "Copy right &copy;. All rights reserved",
-                          class: "fs12p tac mt50",
-                        })
-                      )
+                        )
+                      ),
+                      $("<div>", {
+                        html: "Copy right &copy;. All rights reserved",
+                        class: "fs12p tac mt50",
+                      })
                     )
                   )
                 );
