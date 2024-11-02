@@ -141,14 +141,14 @@ $(function () {
                             !empty(menuChính) &&
                             menuChính.map(function (id) {
                                 return $("<a>", {
-                                  class: "menuNavItem bct bbw1 bss",
+                                  class: "menuNavItem bct bbw1 bss cpi",
                                   text: dữLiệu.tên(id, "ụ"),
                                 });
                               }),
 
                             $("<div>", {
                               class:
-                                "db buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc",
+                                "db buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc cpi",
                               text: "Đăng nhập",
                             })
                           ),
@@ -166,14 +166,14 @@ $(function () {
                             !empty(menuChính) &&
                               menuChính.map(function (id) {
                                 return $("<a>", {
-                                  class: "menuNavItem bct bbw1 bss",
+                                  class: "menuNavItem bct bbw1 bss cpi",
                                   text: dữLiệu.tên(id, "ụ"),
                                 });
                               }),
 
                             $("<div>", {
                               class:
-                                "db buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc",
+                                "db buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc cpi",
                               text: "Đăng nhập",
                             })
                           )
@@ -209,12 +209,12 @@ $(function () {
                               $("<a>", {
                                 text: "Gửi tham luận",
                                 class:
-                                  "buttonCustomWithoutBorder bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc",
+                                  "buttonCustomWithoutBorder bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc cpi",
                               }),
                               $("<a>", {
                                 text: "Tìm hiểu thêm",
                                 class:
-                                  "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 ttc ml25",
+                                  "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 ttc ml25 cpi",
                               })
                             )
                           ),
@@ -222,17 +222,17 @@ $(function () {
                             class: "col-xs-12 col-md-5 pr dn-md-",
                           }).append(
                             $("<img>", {
-                              src: "/imgs/introduce1.png",
+                              src: "/imgs/smallBg1.png",
                               alt: "logo1",
                               class: "pa t0 r0 z3 w50 brtl25 brtr25 brbl25",
                             }),
                             $("<img>", {
-                              src: "/imgs/introduce1.png",
+                              src: "/imgs/smallBg2.png",
                               alt: "logo2",
                               class: "pa t20 l0 z1 w70 brtl25 brtr25 brbl25",
                             }),
                             $("<img>", {
-                              src: "/imgs/introduce1.png",
+                              src: "/imgs/smallBg3.png",
                               alt: "logo3",
                               class: "pa b0 r0 z0 w40 brtl25 brtr25 brbl25",
                             })
@@ -340,6 +340,7 @@ $(function () {
                             var t = $(this);
                             //   a: Danh sách id bài viết
                             CẦN.db("bàiViết." + a, function () {
+                              cl(config("bàiViết."+a[0]+".ộ"));
                               t.append(
                                 $("<div>", {
                                   class:
@@ -409,7 +410,7 @@ $(function () {
                           $("<a>", {
                             text: "Xem thêm",
                             class:
-                              "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 mt50 db",
+                              "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 mt50 db cpi",
                           })
                         )
                       )
@@ -529,7 +530,7 @@ $(function () {
                           $("<a>", {
                             text: "Xem thêm",
                             class:
-                              "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 mla mra mt50 db",
+                              "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 mla mra mt50 db cpi",
                           })
                         )
                       )
@@ -608,7 +609,7 @@ $(function () {
                           $("<a>", {
                             text: "Xem thêm",
                             class:
-                              "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 mla mra mt50 db",
+                              "buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 fwb fs13p brtl25 brtr25 brbl25 mla mra mt50 db cpi",
                           })
                         )
                       )
@@ -697,7 +698,7 @@ $(function () {
                               $("<a>", {
                                 text: "Nhận thông báo",
                                 class:
-                                  "buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc",
+                                  "buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc cpi",
                               })
                             )
                           )
